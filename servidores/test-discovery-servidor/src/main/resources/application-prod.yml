@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: test-discovery-server
+  config:
+    import: optional:configserver:http://test-config-server:8088

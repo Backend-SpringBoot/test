@@ -1,0 +1,18 @@
+services:
+  test-service:
+    image: tata-test/test-tata-service:1.0.0-SNAPSHOT
+    hostname: test-service
+    ports:
+      - "8180"
+    environment:
+      TEST_URL: ${TEST_URL}
+      TEST_USER: ${TEST_USER}
+      TEST_PASSWD: ${TEST_PASSWD}
+      LOGGING_LEVEL_ROOT: INFO
+    deploy:
+      mode: replicated
+      replicas: 1
+      endpoint_mode: vip
+    networks:
+      - ${GLOBAL_NETWORK:-services}
+  

@@ -1,0 +1,37 @@
+services:
+  # ======================================
+  # CONFIG SERVER
+  # ======================================
+  test-config-server:
+    image: tata.test.config.server/tata-test-config-server:1.0.0-SNAPSHOT
+    hostname: test-config-server
+    ports:
+      - "8088:8088"
+    environment:
+      LOGGING_LEVEL_ROOT: INFO
+    networks:
+      - ${GLOBAL_NETWORK:-services}
+  # ======================================
+  # DISCOVERY SERVER
+  # ======================================
+  test-discovery-server:
+    image: tata.test.discovery.server/test-tata-discovery-server:1.0.0
+    hostname: test-discovery-server
+    ports:
+      - "8061:8061"
+    environment:
+      LOGGING_LEVEL_ROOT: INFO
+    networks:
+      - ${GLOBAL_NETWORK:-services}
+  # ======================================
+  # GATEWAY SERVER
+  # ======================================
+  test-gateway-server:
+    image: tata.test.gateway.server/tata-test-gateway-server:1.0.0
+    hostname: test-gateway-server
+    ports:
+      - "8060:8060"
+    environment:
+      LOGGING_LEVEL_ROOT: INFO
+    networks:
+      - ${GLOBAL_NETWORK:-services}
