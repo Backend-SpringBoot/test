@@ -1,6 +1,6 @@
 services:
   test-service:
-    image: tata-test/test-tata-service:1.0.0-SNAPSHOT
+    image: test/test-service:1.0.0-SNAPSHOT
     hostname: test-service
     ports:
       - "8180"
