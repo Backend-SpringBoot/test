@@ -28,7 +28,7 @@ spring:
     url: ${TEST_URL}
     username: ${TEST_USER}
     password: ${TEST_PASSWD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.postgresql.Driver
   jpa:
     database: MYSQL
     open-in-view: false
@@ -41,9 +41,9 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        default_schema: Notarial
+        default_schema: test
         globally_quoted_identifiers: true
-        dialect: org.hibernate.dialect.MySQLDialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
       org:
         hibernate:
           envers:

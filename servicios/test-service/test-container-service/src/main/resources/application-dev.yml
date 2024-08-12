@@ -40,7 +40,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        default_schema: Notarial
+        default_schema: test
         globally_quoted_identifiers: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
       org:
