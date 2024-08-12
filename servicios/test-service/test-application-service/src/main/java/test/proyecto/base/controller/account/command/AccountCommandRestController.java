@@ -6,7 +6,12 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import test.test.record.ExceptionResponseRecord;
 import test.test.record.request.AccountRequestRecord;
 
@@ -24,19 +29,19 @@ import test.test.record.request.AccountRequestRecord;
  * @version 1.0.0
  * @since 6/25/24
  */
-@RequestMapping("/command/accounts")
+@RequestMapping("/command/cuentas")
 @Validated
 public interface AccountCommandRestController {
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    @Operation(summary = "Crea o actualiza una account")
-    ResponseEntity<ExceptionResponseRecord> createorUpdate(
-            @Valid @NotNull @RequestBody AccountRequestRecord accountRequestRecord);
+  @PostMapping
+  @ResponseStatus(HttpStatus.CREATED)
+  @Operation(summary = "Crea o actualiza una account")
+  ResponseEntity<ExceptionResponseRecord> createorUpdate(
+      @Valid @NotNull @RequestBody AccountRequestRecord accountRequestRecord);
 
 
-    @DeleteMapping("/delete/{id}")
-    @ResponseStatus(HttpStatus.CREATED)
-    @Operation(summary = "Elimina una account")
-    ResponseEntity<ExceptionResponseRecord> delete(@PathVariable("id") Integer id);
+  @DeleteMapping("/delete/{id}")
+  @ResponseStatus(HttpStatus.CREATED)
+  @Operation(summary = "Elimina una account")
+  ResponseEntity<ExceptionResponseRecord> delete(@PathVariable("id") Integer id);
 }
