@@ -6,8 +6,8 @@ import test.test.record.request.AccountRequestRecord;
 
 public interface AccountCommandService {
 
-    ResponseEntity<ExceptionResponseRecord> createOrUpdate(AccountRequestRecord accountRequestRecord);
+  ResponseEntity<ExceptionResponseRecord> createOrUpdate(AccountRequestRecord accountRequestRecord);
 
-    ResponseEntity<ExceptionResponseRecord> delete(Integer id);
+  ResponseEntity<ExceptionResponseRecord> delete(String id);
 
 }

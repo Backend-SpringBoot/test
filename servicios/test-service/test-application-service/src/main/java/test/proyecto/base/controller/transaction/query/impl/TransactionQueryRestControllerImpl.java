@@ -1,14 +1,13 @@
 package test.proyecto.base.controller.transaction.query.impl;
 
+import java.time.LocalDateTime;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import test.domain.application.ports.input.transaction.query.TransactionQueryService;
 import test.proyecto.base.controller.transaction.query.TransactionQueryRestController;
 import test.test.record.ExceptionResponseRecord;
-
-import java.time.LocalDateTime;
-import java.util.List;
 
 /**
  * -- AQUI AÑADIR LA DESCRIPCION DE LA IMPLMENTACIÓN DE LA INTERFACE --.
@@ -28,22 +27,23 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TransactionQueryRestControllerImpl implements TransactionQueryRestController {
 
-    private final TransactionQueryService transactionQueryService;
+  private final TransactionQueryService transactionQueryService;
 
 
-    @Override
-    public ResponseEntity<ExceptionResponseRecord> getTransaction(String id) {
-        return transactionQueryService.getTransaction(id);
-    }
+  @Override
+  public ResponseEntity<ExceptionResponseRecord> getTransaction(String id) {
+    return transactionQueryService.getTransaction(id);
+  }
 
-    @Override
-    public ResponseEntity<List<ExceptionResponseRecord>> getTransactions() {
-        return transactionQueryService.getTransactions();
-    }
+  @Override
+  public ResponseEntity<List<ExceptionResponseRecord>> getTransactions() {
+    return transactionQueryService.getTransactions();
+  }
 
-    @Override
-    public ResponseEntity<List<ExceptionResponseRecord>> getMovimientosPorRangoFechas(
-            LocalDateTime startDate, LocalDateTime endDate) {
-        return transactionQueryService.getMovimientosPorRangoFechas(startDate, endDate);
-    }
+  @Override
+  public ResponseEntity<List<ExceptionResponseRecord>> getMovimientosPorRangoFechas(
+      LocalDateTime startDate, LocalDateTime endDate, String idNumber, String movementType) {
+    return transactionQueryService.getMovimientosPorRangoFechas(startDate, endDate, idNumber,
+        movementType);
+  }
 }

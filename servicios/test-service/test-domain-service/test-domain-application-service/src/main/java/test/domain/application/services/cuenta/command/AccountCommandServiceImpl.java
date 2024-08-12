@@ -14,18 +14,18 @@ import test.test.record.request.AccountRequestRecord;
 @Transactional(readOnly = true)
 public class AccountCommandServiceImpl implements AccountCommandService {
 
-    private final AccountCommandRepository accountCommandRepository;
+  private final AccountCommandRepository accountCommandRepository;
 
-    @Override
-    @Transactional
-    public ResponseEntity<ExceptionResponseRecord> createOrUpdate(
-            AccountRequestRecord accountRequestRecord) {
-        return accountCommandRepository.createOrUpdate(accountRequestRecord);
-    }
+  @Override
+  @Transactional
+  public ResponseEntity<ExceptionResponseRecord> createOrUpdate(
+      AccountRequestRecord accountRequestRecord) {
+    return accountCommandRepository.createOrUpdate(accountRequestRecord);
+  }
 
-    @Override
-    @Transactional
-    public ResponseEntity<ExceptionResponseRecord> delete(Integer id) {
-        return accountCommandRepository.delete(id);
-    }
+  @Override
+  @Transactional
+  public ResponseEntity<ExceptionResponseRecord> delete(String id) {
+    return accountCommandRepository.delete(id);
+  }
 }

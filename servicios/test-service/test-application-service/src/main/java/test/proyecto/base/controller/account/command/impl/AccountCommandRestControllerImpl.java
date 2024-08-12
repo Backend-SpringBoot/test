@@ -26,17 +26,17 @@ import test.test.record.request.AccountRequestRecord;
 @RequiredArgsConstructor
 public class AccountCommandRestControllerImpl implements AccountCommandRestController {
 
-    private final AccountCommandService accountCommandService;
+  private final AccountCommandService accountCommandService;
 
 
-    @Override
-    public ResponseEntity<ExceptionResponseRecord> createorUpdate(
-            AccountRequestRecord accountRequestRecord) {
-        return accountCommandService.createOrUpdate(accountRequestRecord);
-    }
+  @Override
+  public ResponseEntity<ExceptionResponseRecord> createorUpdate(
+      AccountRequestRecord accountRequestRecord) {
+    return accountCommandService.createOrUpdate(accountRequestRecord);
+  }
 
-    @Override
-    public ResponseEntity<ExceptionResponseRecord> delete(Integer id) {
-        return accountCommandService.delete(id);
-    }
+  @Override
+  public ResponseEntity<ExceptionResponseRecord> delete(String id) {
+    return accountCommandService.delete(id);
+  }
 }

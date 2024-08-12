@@ -43,5 +43,5 @@ public interface AccountCommandRestController {
   @DeleteMapping("/delete/{id}")
   @ResponseStatus(HttpStatus.CREATED)
   @Operation(summary = "Elimina una account")
-  ResponseEntity<ExceptionResponseRecord> delete(@PathVariable("id") Integer id);
+  ResponseEntity<ExceptionResponseRecord> delete(@PathVariable("id") String id);
 }
