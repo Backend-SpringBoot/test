@@ -23,7 +23,7 @@ import java.util.List;
 //@Audited
 @Table(
         name = "client",
-        schema = "test"
+        schema = "user"
 )
 @EntityListeners(AuditingEntityListener.class)
 public class ClientEntity extends PersonEntity {

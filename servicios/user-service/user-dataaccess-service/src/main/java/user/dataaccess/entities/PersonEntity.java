@@ -25,7 +25,7 @@ import java.util.concurrent.locks.StampedLock;
 //@Audited
 @Table(
         name = "person",
-        schema = "test"
+        schema = "user"
 )
 @Inheritance(strategy = InheritanceType.JOINED)
 @EntityListeners(AuditingEntityListener.class)
