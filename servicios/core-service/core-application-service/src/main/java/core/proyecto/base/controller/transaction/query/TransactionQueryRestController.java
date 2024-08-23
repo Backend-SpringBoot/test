@@ -1,5 +1,6 @@
 package core.proyecto.base.controller.transaction.query;
 
+import core.record.ExceptionResponseRecord;
 import io.swagger.v3.oas.annotations.Operation;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import core.record.ExceptionResponseRecord;
 
 /**
  * -- AQUI AÑADIR LA DESCRIPCION DE LA INTERFACE --.
@@ -48,5 +48,6 @@ public interface TransactionQueryRestController {
       @RequestParam("startDate") LocalDateTime startDate,
       @RequestParam("endDate") LocalDateTime endDate,
       @RequestParam("idNumber") String idNumber,
-      @RequestParam("movementType") String movementType);
+      @RequestParam("movementType") String movementType,
+      @RequestParam("accountType") String accountType);
 }

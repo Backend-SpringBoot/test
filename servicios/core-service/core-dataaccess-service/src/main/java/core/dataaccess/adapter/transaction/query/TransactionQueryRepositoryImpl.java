@@ -47,10 +47,11 @@ public class TransactionQueryRepositoryImpl implements TransactionQueryRepositor
 
   @Override
   public ResponseEntity<List<ExceptionResponseRecord>> getMovimientosPorRangoFechas(
-      LocalDateTime startDate, LocalDateTime endDate, String idNumber, String movementType) {
+      LocalDateTime startDate, LocalDateTime endDate, String idNumber, String movementType,
+      String accountType) {
 
     List<TransactionEntity> movimientosEntities = transactionJpaRepository.findByTransacitionDateBetweenAndClientAndMovementType(
-        startDate, endDate, idNumber, movementType);
+        startDate, endDate, idNumber, movementType, accountType);
 
     if (movimientosEntities.isEmpty()) {
       return new ResponseEntity<>(List.of(

@@ -8,8 +8,8 @@ application:
   version: 1.0.0-SNAPSHOT
 remote:
   microservice:
-    #user-service-url: http://${USER_URL}:8061/USER-SERVICE
-    user-service-url: http://user-service:8096
+    user-service-url: http://${USER_URL}:8060/USER-SERVICE
+    #user-service-url: http://user-service:8096
 spring:
   graphql:
     graphiql:

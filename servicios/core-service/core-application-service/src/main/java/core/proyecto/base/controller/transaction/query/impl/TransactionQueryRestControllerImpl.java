@@ -2,12 +2,12 @@ package core.proyecto.base.controller.transaction.query.impl;
 
 import core.domain.application.ports.input.transaction.query.TransactionQueryService;
 import core.proyecto.base.controller.transaction.query.TransactionQueryRestController;
+import core.record.ExceptionResponseRecord;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import core.record.ExceptionResponseRecord;
 
 /**
  * -- AQUI AÑADIR LA DESCRIPCION DE LA IMPLMENTACIÓN DE LA INTERFACE --.
@@ -42,8 +42,9 @@ public class TransactionQueryRestControllerImpl implements TransactionQueryRestC
 
   @Override
   public ResponseEntity<List<ExceptionResponseRecord>> getMovimientosPorRangoFechas(
-      LocalDateTime startDate, LocalDateTime endDate, String idNumber, String movementType) {
+      LocalDateTime startDate, LocalDateTime endDate, String idNumber, String movementType,
+      String accountType) {
     return transactionQueryService.getMovimientosPorRangoFechas(startDate, endDate, idNumber,
-        movementType);
+        movementType, accountType);
   }
 }

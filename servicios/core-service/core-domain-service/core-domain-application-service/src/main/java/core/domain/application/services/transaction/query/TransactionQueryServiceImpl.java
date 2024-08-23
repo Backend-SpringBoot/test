@@ -2,13 +2,13 @@ package core.domain.application.services.transaction.query;
 
 import core.domain.application.ports.input.transaction.query.TransactionQueryService;
 import core.domain.application.ports.output.repository.transaction.query.TransactionQueryRepository;
+import core.record.ExceptionResponseRecord;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import core.record.ExceptionResponseRecord;
 
 @Service
 @RequiredArgsConstructor
@@ -29,8 +29,9 @@ public class TransactionQueryServiceImpl implements TransactionQueryService {
 
   @Override
   public ResponseEntity<List<ExceptionResponseRecord>> getMovimientosPorRangoFechas(
-      LocalDateTime startDate, LocalDateTime endDate, String idNumber, String movementType) {
+      LocalDateTime startDate, LocalDateTime endDate, String idNumber, String movementType,
+      String accountType) {
     return transactionQueryRepository.getMovimientosPorRangoFechas(startDate, endDate, idNumber,
-        movementType);
+        movementType, accountType);
   }
 }

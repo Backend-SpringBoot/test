@@ -8,7 +8,7 @@ application:
   version: 1.0.0-SNAPSHOT
 remote:
   microservice:
-    core-service-url: http://${CORE_URL}:8061/CORE-SERVICE
+    core-service-url: http://${REMOTE_URL}:8060/CORE-SERVICE
     #core-service-url: http://core-service:8097
 spring:
   application:
