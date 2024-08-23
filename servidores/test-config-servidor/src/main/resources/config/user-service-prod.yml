@@ -2,11 +2,14 @@
 server:
   port: 8096
   servlet:
-    context-path: /api/test
+    context-path: /api/user
 application:
-  title: test-service
+  title: user-service
   version: 1.0.0-SNAPSHOT
-
+remote:
+  microservice:
+    #core-service-url: http://${USER_URL}:8061/CORE-SERVICE
+    core-service-url: http://core-service:8097
 spring:
   graphql:
     graphiql:
@@ -41,7 +44,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        default_schema: test
+        default_schema: user
         globally_quoted_identifiers: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
       org:
@@ -94,7 +97,7 @@ management:
       probability: 1
 openapi:
   service:
-    title: test-service
+    title: user-service
     version: 1.0.0
     url: http://localhot:8060
 springdoc:

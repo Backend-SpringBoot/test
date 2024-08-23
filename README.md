@@ -24,13 +24,13 @@ dependiendo si la imagen generada es de los servidor o servicios.
 ### subir servidores
 Subir en el orden que esta a continuacíon, ya que el config-server es consumido por el discovery-server para registrar los servicios y el gateway es el punto de entrada para las solicitudes entrantes.
 ```
-docker compose -f 0_common.yml -f 1_servers.yml up -d config-server
+docker compose -f 0_common.yml -f 1_servers.yml up -d test-config-server
 ```
 ```
-docker compose -f 0_common.yml -f 1_servers.yml up -d discovery-server
+docker compose -f 0_common.yml -f 1_servers.yml up -d test-discovery-server
 ```
 ```
-docker compose -f 0_common.yml -f 1_servers.yml up -d gateway-server
+docker compose -f 0_common.yml -f 1_servers.yml up -d test-gateway-server
 ```
 ### reiniciar servidores
 ```
@@ -51,11 +51,13 @@ docker compose -f 0_common.yml -f 1_servers.yml down
 
 ### subir servicio
 ```
-docker compose -f 0_common.yml -f 2_services.yml up -d test-service
+docker compose -f 0_common.yml -f 2_services.yml up -d core-service
+docker compose -f 0_common.yml -f 2_services.yml up -d user-service
 ```
 ### reiniciar servicios
 ```
-docker compose -f 0_common.yml -f 2_services.yml restart test-service
+docker compose -f 0_common.yml -f 2_services.yml restart core-service
+docker compose -f 0_common.yml -f 2_services.yml restart user-service
 ```
 ### bajar servicio
 ```
@@ -81,8 +83,10 @@ FLUSH PRIVILEGES;
   ```
  # Added by Docker Desktop
 127.0.0.1 test-config-server
-127.0.0.1 PCHQUIT0408LA11.fj.local (host al que permites acceso)
 127.0.0.1 test-discovery-server
 127.0.0.1 test-gateway-server
-127.0.0.1 test-service 
+127.0.0.1 core-service 
+127.0.0.1 user-service 
+127.0.0.1 PCHQUIT0408LA11.fj.local (host al que permites acceso)
+
   ```

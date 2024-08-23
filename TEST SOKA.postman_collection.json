@@ -11,452 +11,486 @@
 			"name": "local",
 			"item": [
 				{
-					"name": "person",
+					"name": "user",
 					"item": [
 						{
-							"name": "get person",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/query/person/23122255609",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"query",
-										"person",
-										"23122255609"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get people",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/query/person/users",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"query",
-										"person",
-										"users"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Dario\",\r\n    \"gender\": \"Masculino\",\r\n    \"age\": 31,\r\n    \"idNumber\": \"23122255609\",\r\n    \"address\": \"Quito\",\r\n    \"phone\": \"0932343456\",\r\n    \"status\":\"TRUE\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "person",
+							"item": [
+								{
+									"name": "get person",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://user-service:8096/api/user/query/person/23122255609",
+											"protocol": "http",
+											"host": [
+												"user-service"
+											],
+											"port": "8096",
+											"path": [
+												"api",
+												"user",
+												"query",
+												"person",
+												"23122255609"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://localhost:8096/api/test/command/person",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"command",
-										"person"
-									]
+								{
+									"name": "get people",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://user-service:8096/api/user/query/person/users",
+											"protocol": "http",
+											"host": [
+												"user-service"
+											],
+											"port": "8096",
+											"path": [
+												"api",
+												"user",
+												"query",
+												"person",
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Dario\",\r\n    \"gender\": \"Masculino\",\r\n    \"age\": 31,\r\n    \"idNumber\": \"23122255609\",\r\n    \"address\": \"Quito\",\r\n    \"phone\": \"0932343456\",\r\n    \"status\":\"TRUE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://user-service:8096/api/user/command/person",
+											"protocol": "http",
+											"host": [
+												"user-service"
+											],
+											"port": "8096",
+											"path": [
+												"api",
+												"user",
+												"command",
+												"person"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nombre\": \"Dario\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"23122255609\",\r\n    \"direccion\": \"Quito\",\r\n    \"telefono\": \"0932343456\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://user-service:8096/api/user/command/person/delete/23122255609",
+											"protocol": "http",
+											"host": [
+												"user-service"
+											],
+											"port": "8096",
+											"path": [
+												"api",
+												"user",
+												"command",
+												"person",
+												"delete",
+												"23122255609"
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							]
 						},
 						{
-							"name": "delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"nombre\": \"Dario\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"23122255609\",\r\n    \"direccion\": \"Quito\",\r\n    \"telefono\": \"0932343456\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "client",
+							"item": [
+								{
+									"name": "get client",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://user-service:8096/api/user/query/clientes/23122255609",
+											"protocol": "http",
+											"host": [
+												"user-service"
+											],
+											"port": "8096",
+											"path": [
+												"api",
+												"user",
+												"query",
+												"clientes",
+												"23122255609"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://localhost:8096/api/test/command/person/delete/23122255609",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"command",
-										"person",
-										"delete",
-										"23122255609"
-									]
+								{
+									"name": "get clients",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://user-service:8096/api/user/query/clientes",
+											"protocol": "http",
+											"host": [
+												"user-service"
+											],
+											"port": "8096",
+											"path": [
+												"api",
+												"user",
+												"query",
+												"clientes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Dario\",\r\n    \"gender\": \"Masculino\",\r\n    \"age\": 31,\r\n    \"idNumber\": \"23122255609\",\r\n    \"address\": \"Quito\",\r\n    \"phone\": \"0932343456\",\r\n    \"password\": \"214222\",\r\n    \"status\": \"TRUE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://user-service:8096/api/user/command/clientes",
+											"protocol": "http",
+											"host": [
+												"user-service"
+											],
+											"port": "8096",
+											"path": [
+												"api",
+												"user",
+												"command",
+												"clientes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://user-service:8096/api/user/command/clientes/delete/23122255609",
+											"protocol": "http",
+											"host": [
+												"user-service"
+											],
+											"port": "8096",
+											"path": [
+												"api",
+												"user",
+												"command",
+												"clientes",
+												"delete",
+												"23122255609"
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							]
 						}
 					]
 				},
 				{
-					"name": "client",
+					"name": "core",
 					"item": [
 						{
-							"name": "get client",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/query/clientes/23122255609",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"query",
-										"clientes",
-										"23122255609"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get clients",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/query/clientes",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"query",
-										"clientes"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Dario\",\r\n    \"gender\": \"Masculino\",\r\n    \"age\": 31,\r\n    \"idNumber\": \"23122255609\",\r\n    \"address\": \"Quito\",\r\n    \"phone\": \"0932343456\",\r\n    \"password\": \"214222\",\r\n    \"status\": \"TRUE\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "accounts",
+							"item": [
+								{
+									"name": "get cuenta",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://core-service:8097/api/core/query/cuentas/585545",
+											"protocol": "http",
+											"host": [
+												"core-service"
+											],
+											"port": "8097",
+											"path": [
+												"api",
+												"core",
+												"query",
+												"cuentas",
+												"585545"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://localhost:8096/api/test/command/clientes",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"command",
-										"clientes"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/command/clientes/delete/23122255609",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"command",
-										"clientes",
-										"delete",
-										"23122255609"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "movimientos",
-					"item": [
-						{
-							"name": "get movimiento",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/query/movimientos/585545",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"query",
-										"movimientos",
-										"585545"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get movimientos",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/query/movimientos/transactions",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"query",
-										"movimientos",
-										"transactions"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get movimientos por fecha",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/query/movimientos/transactions/byDate?startDate=2024-08-12T00:00:00&endDate=2024-08-12T23:59:59&idNumber=Dario&movementType=Deposito",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"query",
-										"movimientos",
-										"transactions",
-										"byDate"
-									],
-									"query": [
-										{
-											"key": "startDate",
-											"value": "2024-08-12T00:00:00"
-										},
-										{
-											"key": "endDate",
-											"value": "2024-08-12T23:59:59"
-										},
-										{
-											"key": "idNumber",
-											"value": "Dario"
-										},
-										{
-											"key": "movementType",
-											"value": "Deposito"
+								{
+									"name": "get cuenta by idNumber",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://core-service:8097/api/core/query/cuentas/by/23122255609",
+											"protocol": "http",
+											"host": [
+												"core-service"
+											],
+											"port": "8097",
+											"path": [
+												"api",
+												"core",
+												"query",
+												"cuentas",
+												"by",
+												"23122255609"
+											]
 										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"idNumber\": \"23122255609\",\r\n    \"accountNumber\": \"585545\",\r\n    \"accountType\": \"Ahorros\",\r\n    \"movement\": 540,\r\n    \"status\": \"TRUE\",\r\n    \"movementType\": \"Deposito\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://localhost:8096/api/test/command/movimientos",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"command",
-										"movimientos"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "accounts",
-					"item": [
-						{
-							"name": "get cuenta",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/query/cuentas/585545",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"query",
-										"cuentas",
-										"585545"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get cuentas",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/query/cuentas/accounts",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"query",
-										"cuentas",
-										"accounts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"accountNumber\":\"585545\",\r\n    \"accountType\":\"Corriente\",\r\n    \"initialBalance\":1000,\r\n    \"clientIdNumber\":\"23122255609\",\r\n    \"status\":\"TRUE\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+								{
+									"name": "get cuentas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://core-service:8097/api/core/query/cuentas/accounts",
+											"protocol": "http",
+											"host": [
+												"core-service"
+											],
+											"port": "8097",
+											"path": [
+												"api",
+												"core",
+												"query",
+												"cuentas",
+												"accounts"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://localhost:8096/api/test/command/cuentas",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"command",
-										"cuentas"
-									]
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountNumber\":\"5855455\",\r\n    \"accountType\":\"Ahorros\",\r\n    \"initialBalance\":2000,\r\n    \"idNumber\":\"23122255609\",\r\n    \"status\":\"TRUE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://core-service:8097/api/core/command/cuentas",
+											"protocol": "http",
+											"host": [
+												"core-service"
+											],
+											"port": "8097",
+											"path": [
+												"api",
+												"core",
+												"command",
+												"cuentas"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://core-service:8097/api/core/command/cuentas/delete/5855455",
+											"protocol": "http",
+											"host": [
+												"core-service"
+											],
+											"port": "8097",
+											"path": [
+												"api",
+												"core",
+												"command",
+												"cuentas",
+												"delete",
+												"5855455"
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							]
 						},
 						{
-							"name": "create delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8096/api/test/command/cuentas/delete/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"command",
-										"cuentas",
-										"delete",
-										"1"
-									]
+							"name": "movimientos",
+							"item": [
+								{
+									"name": "get movimiento",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://core-service:8097/api/core/query/movimientos/585545",
+											"protocol": "http",
+											"host": [
+												"core-service"
+											],
+											"port": "8097",
+											"path": [
+												"api",
+												"core",
+												"query",
+												"movimientos",
+												"585545"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get movimientos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://core-service:8097/api/core/query/movimientos/transactions",
+											"protocol": "http",
+											"host": [
+												"core-service"
+											],
+											"port": "8097",
+											"path": [
+												"api",
+												"core",
+												"query",
+												"movimientos",
+												"transactions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get movimientos por fecha",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://core-service:8097/api/core/query/movimientos/transactions/byDate?startDate=2024-08-22T00:00:00&endDate=2024-08-22T23:59:59&idNumber=23122255609&movementType=Deposito",
+											"protocol": "http",
+											"host": [
+												"core-service"
+											],
+											"port": "8097",
+											"path": [
+												"api",
+												"core",
+												"query",
+												"movimientos",
+												"transactions",
+												"byDate"
+											],
+											"query": [
+												{
+													"key": "startDate",
+													"value": "2024-08-22T00:00:00"
+												},
+												{
+													"key": "endDate",
+													"value": "2024-08-22T23:59:59"
+												},
+												{
+													"key": "idNumber",
+													"value": "23122255609"
+												},
+												{
+													"key": "movementType",
+													"value": "Deposito"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"idNumber\": \"23122255609\",\r\n    \"accountNumber\": \"585545\",\r\n    \"accountType\": \"Corriente\",\r\n    \"movement\": 540,\r\n    \"status\": \"TRUE\",\r\n    \"movementType\": \"Deposito\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://core-service:8097/api/core/command/movimientos",
+											"protocol": "http",
+											"host": [
+												"core-service"
+											],
+											"port": "8097",
+											"path": [
+												"api",
+												"core",
+												"command",
+												"movimientos"
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							]
 						}
 					]
 				}
@@ -466,467 +500,503 @@
 			"name": "remote",
 			"item": [
 				{
-					"name": "person",
+					"name": "core",
 					"item": [
 						{
-							"name": "get person",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/query/person/23122255609",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"query",
-										"person",
-										"23122255609"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get people",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/query/person/users",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"query",
-										"person",
-										"users"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"María Lema\",\r\n    \"gender\": \"Femenino\",\r\n    \"age\": 31,\r\n    \"idNumber\": \"1232343456\",\r\n    \"address\": \"Quito\",\r\n    \"phone\": \"0932343456\",\r\n    \"status\":\"TRUE\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "accounts",
+							"item": [
+								{
+									"name": "get cuenta",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/CORE-SERVICE/api/core/query/cuentas/585545",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"CORE-SERVICE",
+												"api",
+												"core",
+												"query",
+												"cuentas",
+												"585545"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/command/person",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"command",
-										"person"
-									]
+								{
+									"name": "get cuentas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/CORE-SERVICE/api/core/query/cuentas/accounts",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"CORE-SERVICE",
+												"api",
+												"core",
+												"query",
+												"cuentas",
+												"accounts"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountNumber\":\"585545\",\r\n    \"accountType\":\"Ahorros\",\r\n    \"initialBalance\":1000,\r\n    \"clientIdNumber\":\"23122255609\",\r\n    \"status\":\"TRUE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/command/cuentas",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"TEST-SERVICE",
+												"api",
+												"test",
+												"command",
+												"cuentas"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/CORE-SERVICE/api/core/command/cuentas/delete/585545",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"CORE-SERVICE",
+												"api",
+												"core",
+												"command",
+												"cuentas",
+												"delete",
+												"585545"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get cuenta by idNumber Copy",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/CORE-SERVICE/api/core/query/cuentas/by/23122255609",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"CORE-SERVICE",
+												"api",
+												"core",
+												"query",
+												"cuentas",
+												"by",
+												"23122255609"
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							]
 						},
 						{
-							"name": "delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"nombre\": \"Dario\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"23122255609\",\r\n    \"direccion\": \"Quito\",\r\n    \"telefono\": \"0932343456\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "movimientos",
+							"item": [
+								{
+									"name": "get movimiento",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/CORE-SERVICE/api/core/query/movimientos/585545",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"CORE-SERVICE",
+												"api",
+												"core",
+												"query",
+												"movimientos",
+												"585545"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/command/person/delete/1232343456",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"command",
-										"person",
-										"delete",
-										"1232343456"
-									]
+								{
+									"name": "get movimientos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/CORE-SERVICE/api/core/query/movimientos/transactions",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"CORE-SERVICE",
+												"api",
+												"core",
+												"query",
+												"movimientos",
+												"transactions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get movimientos por fecha",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/CORE-SERVICE/api/core/query/movimientos/transactions/byDate?startDate=2024-08-23T00:00:00&endDate=2024-08-23T23:59:59&idNumber=23122255609&movementType=Retiro",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"CORE-SERVICE",
+												"api",
+												"core",
+												"query",
+												"movimientos",
+												"transactions",
+												"byDate"
+											],
+											"query": [
+												{
+													"key": "startDate",
+													"value": "2024-08-23T00:00:00"
+												},
+												{
+													"key": "endDate",
+													"value": "2024-08-23T23:59:59"
+												},
+												{
+													"key": "idNumber",
+													"value": "23122255609"
+												},
+												{
+													"key": "movementType",
+													"value": "Retiro"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"idNumber\": \"23122255609\",\r\n    \"accountNumber\": \"585545\",\r\n    \"accountType\": \"Corriente\",\r\n    \"movement\": 540,\r\n    \"status\": \"TRUE\",\r\n    \"movementType\": \"Retiro\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://test-gateway-server:8060/CORE-SERVICE/api/core/command/movimientos",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"CORE-SERVICE",
+												"api",
+												"core",
+												"command",
+												"movimientos"
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							]
 						}
 					]
 				},
 				{
-					"name": "client",
+					"name": "user",
 					"item": [
 						{
-							"name": "get client",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/query/clientes/23122255609",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"query",
-										"clientes",
-										"23122255609"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get clients",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/query/clientes",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"query",
-										"clientes"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Josefina\",\r\n    \"gender\": \"Femenino\",\r\n    \"age\": 31,\r\n    \"idNumber\": \"1232343456\",\r\n    \"address\": \"Quito\",\r\n    \"phone\": \"0932343456\",\r\n    \"password\": \"214222\",\r\n    \"status\": \"TRUE\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "client",
+							"item": [
+								{
+									"name": "get client",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/USER-SERVICE/api/user/query/clientes/23122255609",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"USER-SERVICE",
+												"api",
+												"user",
+												"query",
+												"clientes",
+												"23122255609"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/command/clientes",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"command",
-										"clientes"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/command/clientes/delete/1232343456",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"command",
-										"clientes",
-										"delete",
-										"1232343456"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "movimientos",
-					"item": [
-						{
-							"name": "get movimiento",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/query/movimientos/585545",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"query",
-										"movimientos",
-										"585545"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get movimientos",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/query/movimientos/transactions",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"query",
-										"movimientos",
-										"transactions"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get movimientos por fecha",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/query/movimientos/transactions/byDate?startDate=2024-08-12T00:00:00&endDate=2024-08-12T23:59:59&idNumber=Dario&movementType=Deposito",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"query",
-										"movimientos",
-										"transactions",
-										"byDate"
-									],
-									"query": [
-										{
-											"key": "startDate",
-											"value": "2024-08-12T00:00:00"
-										},
-										{
-											"key": "endDate",
-											"value": "2024-08-12T23:59:59"
-										},
-										{
-											"key": "idNumber",
-											"value": "Dario"
-										},
-										{
-											"key": "movementType",
-											"value": "Deposito"
+								{
+									"name": "get clients",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/USER-SERVICE/api/user/query/clientes",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"USER-SERVICE",
+												"api",
+												"user",
+												"query",
+												"clientes"
+											]
 										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"idNumber\": \"23122255609\",\r\n    \"accountNumber\": \"585545\",\r\n    \"accountType\": \"Corriente\",\r\n    \"movement\": 540,\r\n    \"status\": \"TRUE\",\r\n    \"movementType\": \"Retiro\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://localhost:8096/api/test/command/movimientos",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8096",
-									"path": [
-										"api",
-										"test",
-										"command",
-										"movimientos"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "accounts",
-					"item": [
-						{
-							"name": "get cuenta",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/query/cuentas/585545",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"query",
-										"cuentas",
-										"585545"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get cuentas",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/query/cuentas/accounts",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"query",
-										"cuentas",
-										"accounts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"accountNumber\":\"585545\",\r\n    \"accountType\":\"Ahorros\",\r\n    \"initialBalance\":1000,\r\n    \"clientIdNumber\":\"23122255609\",\r\n    \"status\":\"TRUE\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Josefina\",\r\n    \"gender\": \"Femenino\",\r\n    \"age\": 31,\r\n    \"idNumber\": \"1232343456\",\r\n    \"address\": \"Quito\",\r\n    \"phone\": \"0932343456\",\r\n    \"password\": \"214222\",\r\n    \"status\": \"TRUE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://test-gateway-server:8060/USER-SERVICE/api/user/command/clientes",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"USER-SERVICE",
+												"api",
+												"user",
+												"command",
+												"clientes"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/command/cuentas",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"command",
-										"cuentas"
-									]
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/USER-SERVICE/api/user/command/clientes/delete/1232343456",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"USER-SERVICE",
+												"api",
+												"user",
+												"command",
+												"clientes",
+												"delete",
+												"1232343456"
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							]
 						},
 						{
-							"name": "create delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "http://test-gateway-server:8060/TEST-SERVICE/api/test/command/cuentas/delete/585545",
-									"protocol": "http",
-									"host": [
-										"test-gateway-server"
-									],
-									"port": "8060",
-									"path": [
-										"TEST-SERVICE",
-										"api",
-										"test",
-										"command",
-										"cuentas",
-										"delete",
-										"585545"
-									]
+							"name": "person",
+							"item": [
+								{
+									"name": "get person",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/USER-SERVICE/api/user/query/person/23122255609",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"USER-SERVICE",
+												"api",
+												"user",
+												"query",
+												"person",
+												"23122255609"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get people",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://test-gateway-server:8060/USER-SERVICE/api/user/query/person/users",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"USER-SERVICE",
+												"api",
+												"user",
+												"query",
+												"person",
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"María Lema\",\r\n    \"gender\": \"Femenino\",\r\n    \"age\": 31,\r\n    \"idNumber\": \"1232343456\",\r\n    \"address\": \"Quito\",\r\n    \"phone\": \"0932343456\",\r\n    \"status\":\"TRUE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://test-gateway-server:8060/USER-SERVICE/api/user/command/person",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"USER-SERVICE",
+												"api",
+												"user",
+												"command",
+												"person"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nombre\": \"Dario\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"23122255609\",\r\n    \"direccion\": \"Quito\",\r\n    \"telefono\": \"0932343456\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://test-gateway-server:8060/USER-SERVICE/api/user/command/person/delete/1232343456",
+											"protocol": "http",
+											"host": [
+												"test-gateway-server"
+											],
+											"port": "8060",
+											"path": [
+												"USER-SERVICE",
+												"api",
+												"user",
+												"command",
+												"person",
+												"delete",
+												"1232343456"
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							]
 						}
 					]
 				}

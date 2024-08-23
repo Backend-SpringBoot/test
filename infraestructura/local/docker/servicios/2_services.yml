@@ -1,13 +1,30 @@
 services:
-  test-service:
-    image: test/test-service:1.0.0-SNAPSHOT
-    hostname: test-service
+  core-service:
+    image: core/core-service:1.0.0-SNAPSHOT
+    hostname: core-service
     ports:
       - "8180"
     environment:
-      TEST_URL: ${TEST_URL}
-      TEST_USER: ${TEST_USER}
-      TEST_PASSWD: ${TEST_PASSWD}
+      CORE_URL: ${CORE_URL}
+      CORE_USER: ${CORE_USER}
+      CORE_PASSWD: ${CORE_PASSWD}
+      LOGGING_LEVEL_ROOT: INFO
+    deploy:
+      mode: replicated
+      replicas: 1
+      endpoint_mode: vip
+    networks:
+      - ${GLOBAL_NETWORK:-services}
+
+  user-service:
+    image: user/user-service:1.0.0-SNAPSHOT
+    hostname: user-service
+    ports:
+      - "8180"
+    environment:
+      USER_URL: ${USER_URL}
+      USER_USER: ${USER_USER}
+      USER_PASSWD: ${USER_PASSWD}
       LOGGING_LEVEL_ROOT: INFO
     deploy:
       mode: replicated

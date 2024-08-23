@@ -1,12 +1,15 @@
 ---
 server:
-  port: 8096
+  port: 8097
   servlet:
-    context-path: /api/test
+    context-path: /api/core
 application:
-  title: test-service
+  title: core-service
   version: 1.0.0-SNAPSHOT
-
+remote:
+  microservice:
+    #user-service-url: http://${USER_URL}:8061/USER-SERVICE
+    user-service-url: http://user-service:8096
 spring:
   graphql:
     graphiql:
@@ -25,9 +28,9 @@ spring:
     ansi:
       enabled: always
   datasource:
-    url: ${USER_URL}
-    username: ${USER_USER}
-    password: ${USER_PASSWD}
+    url: ${CORE_URL}
+    username: ${CORE_USER}
+    password: ${CORE_PASSWD}
     driver-class-name: org.postgresql.Driver
   jpa:
     database: MYSQL
@@ -41,7 +44,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        default_schema: test
+        default_schema: core
         globally_quoted_identifiers: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
       org:
@@ -94,7 +97,7 @@ management:
       probability: 1
 openapi:
   service:
-    title: test-service
+    title: core-service
     version: 1.0.0
     url: http://localhot:8060
 springdoc:
