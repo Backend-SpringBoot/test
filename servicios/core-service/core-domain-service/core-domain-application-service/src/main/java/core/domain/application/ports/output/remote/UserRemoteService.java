@@ -7,6 +7,6 @@ public interface UserRemoteService {
 
   ResponseEntity<ExceptionResponseRecord> getUser(String id);
 
-  ResponseEntity<ExceptionResponseRecord> getClient(String id);
+  ExceptionResponseRecord getClient(String id);
 
 }

@@ -91,7 +91,7 @@ public class PersonCommandRepositoryImpl implements PersonCommandRepository {
 
   private ExceptionResponseRecord CreateException(String message, Object o) {
     return ExceptionResponseRecord.builder()
-        .httpStatus(HttpStatus.ACCEPTED)
+        .httpStatus(200)
         .message(message)
         .data(o)
         .build();

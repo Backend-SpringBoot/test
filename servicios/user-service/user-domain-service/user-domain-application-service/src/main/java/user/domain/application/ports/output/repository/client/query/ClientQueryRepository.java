@@ -6,7 +6,7 @@ import user.test.record.ExceptionResponseRecord;
 
 public interface ClientQueryRepository {
 
-    ResponseEntity<ExceptionResponseRecord> getClient(String id);
+  ResponseEntity<ExceptionResponseRecord> getClient(String id);
 
-    ResponseEntity<List<ExceptionResponseRecord>> getCliets();
+  ResponseEntity<List<ExceptionResponseRecord>> getCliets();
 }

@@ -2,7 +2,6 @@ package core.remote.adapter;
 
 import core.domain.application.ports.output.remote.UserRemoteService;
 import core.record.ExceptionResponseRecord;
-import core.record.response.PersonResponseRecord;
 import core.remote.feign.UserRemoteFeignClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +21,7 @@ public class UserRemoteFeignClientServiceImpl implements UserRemoteService {
   }
 
   @Override
-  public ResponseEntity<ExceptionResponseRecord> getClient(String id) {
+  public ExceptionResponseRecord getClient(String id) {
     return userRemoteFeignClientService.getClient(id);
   }
 }

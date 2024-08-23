@@ -4,10 +4,10 @@ import java.util.List;
 import org.springframework.http.ResponseEntity;
 import user.test.record.ExceptionResponseRecord;
 
-public interface ClientQueryService {
+public interface UserQueryService {
 
-    ResponseEntity<ExceptionResponseRecord> getClient(String id);
+  ResponseEntity<ExceptionResponseRecord> getClient(String id);
 
-    ResponseEntity<List<ExceptionResponseRecord>> getClients();
+  ResponseEntity<List<ExceptionResponseRecord>> getClients();
 
 }

@@ -1,7 +1,6 @@
 package core.remote.feign;
 
 import core.record.ExceptionResponseRecord;
-import core.record.response.PersonResponseRecord;
 import core.remote.adapter.UserRemoteFeignClientServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,5 @@ public interface UserRemoteFeignClientService {
   ResponseEntity<ExceptionResponseRecord> getUser(@PathVariable("id") String id);
 
   @GetMapping(value = "/api/user/query/clientes/{id}", consumes = "application/json")
-  ResponseEntity<ExceptionResponseRecord> getClient(@PathVariable("id") String id);
-
-
+  ExceptionResponseRecord getClient(@PathVariable("id") String id);
 }

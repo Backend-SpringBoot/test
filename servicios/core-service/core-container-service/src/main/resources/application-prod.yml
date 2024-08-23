@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: core-service
+  config:
+    import: optional:configserver:http://core-config-server:8088

@@ -4,9 +4,9 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import user.domain.application.ports.input.client.query.ClientQueryService;
-import user.test.record.ExceptionResponseRecord;
+import user.domain.application.ports.input.client.query.UserQueryService;
 import user.proyecto.base.controller.client.query.ClientQueryRestController;
+import user.test.record.ExceptionResponseRecord;
 
 /**
  * -- AQUI AÑADIR LA DESCRIPCION DE LA IMPLMENTACIÓN DE LA INTERFACE --.
@@ -26,15 +26,15 @@ import user.proyecto.base.controller.client.query.ClientQueryRestController;
 @RequiredArgsConstructor
 public class ClientQueryRestControllerImpl implements ClientQueryRestController {
 
-    private final ClientQueryService clientQueryService;
+  private final UserQueryService userQueryService;
 
-    @Override
-    public ResponseEntity<ExceptionResponseRecord> getClient(String id) {
-        return clientQueryService.getClient(id);
-    }
+  @Override
+  public ResponseEntity<ExceptionResponseRecord> getClient(String id) {
+    return userQueryService.getClient(id);
+  }
 
-    @Override
-    public ResponseEntity<List<ExceptionResponseRecord>> getClients() {
-        return clientQueryService.getClients();
-    }
+  @Override
+  public ResponseEntity<List<ExceptionResponseRecord>> getClients() {
+    return userQueryService.getClients();
+  }
 }
