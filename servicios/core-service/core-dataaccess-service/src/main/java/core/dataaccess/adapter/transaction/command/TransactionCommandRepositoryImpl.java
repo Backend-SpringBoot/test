@@ -39,6 +39,16 @@ public class TransactionCommandRepositoryImpl implements TransactionCommandRepos
     AccountEntity account;
     double availableBalance;
 
+    /*List<> autos = new ArrayList();
+    autos.add("Auto azul");
+    autos.add("Auto rojo");
+    autos.add("Auto amarillo");
+
+    autos.stream().map( auto -> {
+
+      return auto;
+    }).filter();*/
+
     entity = TransactionMapper.INSTANCE.requestRecordToEntity(transactionRequestRecord);
     client = validateClient(transactionRequestRecord.idNumber());
     account = validateAccount(transactionRequestRecord.idNumber(),
